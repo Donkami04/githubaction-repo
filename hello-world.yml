@@ -1,0 +1,10 @@
+name: hola-mundo
+on: [push]
+jobs:
+  branches:
+    - master
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mensaje de Hola Mundo
+        run: node index.js
