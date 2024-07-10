@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mensaje de Hola Mundo
-        run: node hello-world.js
+        run: ls -la
