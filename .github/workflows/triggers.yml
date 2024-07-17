@@ -1,0 +1,19 @@
+name: Triggers
+run-name: Estoy corriendo Triggers
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      -  '**.js'
+jobs:
+  hola-mundo-con-triggers:
+    runs-on: ubuntu-latest
+    steps:
+      -  name: Cambiar a rama master
+         uses: actions/checkout@v3
+      -  name: Configurar para que use Node.JS
+         uses: actions/setup-node@v2
+         with:
+           node-version: '20'
+      -  name: Correr el archivo de JS
+         run: node hello-world.js
