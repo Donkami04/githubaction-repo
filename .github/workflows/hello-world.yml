@@ -1,5 +1,4 @@
 name: hola-mundo
-
 on:
   push:
     branches:
@@ -10,15 +9,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      #! Primero definimos lo que la maquina virutal de Github
+      #! va a utilizar, en este caso la rama master y node@v.20
+
+      # Se hace un checkout a la rama master por defecto
+      # No hace falta el with
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
           ref: "master"
 
+      # Se configura Node.js en su version 20
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '20'
 
+      # Corremos el comando que ejecutara nuestro action
       - name: Run Hello World script
         run: node hello-world.js
