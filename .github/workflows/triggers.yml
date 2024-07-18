@@ -5,6 +5,9 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       -  '**.js'
+  issues:
+    types:
+      -  labeled
 jobs:
   hola-mundo-con-triggers:
     runs-on: ubuntu-latest
