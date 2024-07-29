@@ -1,2 +1,1 @@
-console.log("Intentando solo con el Push")
-console.log("Ahora intentando tambien con el pull request")
+console.log("Hola mundito desde mi Github Actions")
